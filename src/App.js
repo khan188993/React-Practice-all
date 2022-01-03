@@ -1,25 +1,49 @@
 import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [allData, setAllData] = useState([])
+
+  const submitForm = (e)=>{
+    e.preventDefault();
+    let newData = {email,password};
+    setAllData([...allData,newData]);
+
+    
+  }
+  
+
+
+
+
+
+  return(
+    <>
+      <h1>Log IN form</h1>
+      <form action="" onSubmit={submitForm}>
+        email:<input type="email" onChange={(e)=>setEmail(e.target.value)}/><br></br>
+        password:<input type="password" onChange={(e)=>setPassword(e.target.value)}/><br></br>
+        <input type="submit" value="Login" /><br></br>
+      </form>
+
+      {
+        allData.map((current)=>{
+
+          return(
+            <div class="showData">
+             <h3>Email:{current.email}<br></br> Pass:{current.password}</h3>
+          </div>
+          )
+          
+        })
+      }
+      
+    </>
+  )
 }
 
 export default App;
