@@ -11,7 +11,10 @@ function App(){
   const submitForm = (e)=>{
     e.preventDefault();
     let newData = {email,password};
+    setEmail("");
+    setPassword("");
     setAllData([...allData,newData]);
+    
 
     
   }
@@ -25,8 +28,8 @@ function App(){
     <>
       <h1>Log IN form</h1>
       <form action="" onSubmit={submitForm}>
-        email:<input type="email" onChange={(e)=>setEmail(e.target.value)}/><br></br>
-        password:<input type="password" onChange={(e)=>setPassword(e.target.value)}/><br></br>
+        email:<input value={email} type="email" onChange={(e)=>setEmail(e.target.value)}/><br></br>
+        password:<input value={password} type="password" onChange={(e)=>setPassword(e.target.value)}/><br></br>
         <input type="submit" value="Login" /><br></br>
       </form>
 
@@ -41,6 +44,9 @@ function App(){
           
         })
       }
+
+     
+     
       
     </>
   )
