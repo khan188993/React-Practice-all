@@ -16,12 +16,13 @@ import UseCon from './react-crash/useCon' */
 import UseState from './thapa-hook/useState'
 import TitleCount from './thapa-hook/custom-hooks/titleCount'
 import Todo from './thapa-hook/todo'
+import TodoWithLocal from './thapa-hook/todoWithLocal'
 
 
 const App = () => {
   return (
     <>
-      <Todo/>
+      <TodoWithLocal/>
     </>
   )
 }
