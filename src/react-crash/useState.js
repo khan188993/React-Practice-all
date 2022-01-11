@@ -1,21 +1,20 @@
 import React,{useState} from 'react'
 
 const UseState = () => {
-    const [name, setName] = useState("")
-    // console.log(useState(name));
-    const onChange = (event) =>{
-        console.log(event.target);
-        console.log(event.target.type);
-        console.log(event.target.value);
-        
-        let inputValue = event.target.value;
-        setName(inputValue)
-        console.log(inputValue);
-    }
+   const [counter, setCounter] = useState(0)
+   const [text, setText] = useState(true)
+
+   const onClick = () => {
+       setCounter((prev) =>counter+1)
+       setText(!text)
+       console.log(text,counter);
+   }
+
     return (
         <>
-            <h1>{name}</h1>
-            <input type="text" value={name} onChange={onChange}/>
+            <h1>{counter}</h1>
+            <button onClick={onClick}>change</button>
+            {text && <h1>Hide and Show</h1>}
         </>
     )
 }
