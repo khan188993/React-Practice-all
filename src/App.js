@@ -5,7 +5,7 @@ import UseReducer from './react-crash/useReducer'
 const App = () => {
   return (
     <>
-      <UseState/>
+      <UseReducer/>
     </>
   )
 }
