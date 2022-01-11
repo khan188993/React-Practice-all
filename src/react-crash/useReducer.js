@@ -1,43 +1,38 @@
 import React, { useState, useReducer } from "react";
+    // reducer call er sathei value cole asbe 
+    const reducer = (state,action)=>{
+        if(action.type =="increment"){
+            console.log(state);
+            return {count:state.count+1,text:state.text} 
+        }
+        if(action.type =="show"){
+            console.log(state);
+            return {count:state.count,text:true}
+        }
+        if(action.type ==="hide"){
+            console.log(state);
+            return {count:state.count,text:false}
+        }
 
-function reducer(state, action) {
- /*  switch(action.type){
-            case "counter":
-                return {counter:state.counter+1,text:state.text}
-            case "hide":
-                return {counter:state.counter,text:!state.text}
-            default:
-                return state;
-        } */
-  if (action.type == "counter") {
-    return { counter: state.counter + 1, text: state.text };
-  }
-  if (action.type == "hide") {
-    return { counter: state.counter, text: !state.text };
-  }
-  return state;
-}
-
+        return state;
+    }
 const UseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, { counter: 0, text: false });
-
-  // const [counter, setCounter] = useState(0)
-  // const [text, setText] = useState(true)
-
-  // const onClick = () => {
-  //     setCounter((prev) =>counter+1)
-  //     setText(!text)
-  //     console.log(text,counter);
-  // }
-
+    const [state, dispatch] = useReducer(reducer,{count:0,text:true})
   return (
     <>
-      <h1>{state.counter}</h1>
-      <button onClick={()=>{
-          dispatch({type:"hide"})
-          dispatch({type:"counter"})
-      }}>click</button>
-      {state.text && <h1>Hide and Show</h1>}
+    {state.text && <h1>Show Hide Text</h1>}
+    <button onClick={()=>{
+        dispatch({type:"show"})
+    }}>Show</button>
+    <button onClick={()=>{
+        dispatch({type:"hide"})
+    }}>Hide</button>
+  
+    <h1>{state.count}</h1>
+    <button onClick={()=>{
+        dispatch({type:"increment"})
+    }}>Increment</button>
+
     </>
   );
 };
