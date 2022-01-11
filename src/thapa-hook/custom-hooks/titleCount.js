@@ -1,19 +1,11 @@
 import React,{useState,useEffect} from 'react'
+import useTitle from './useTitle';
 
 const TitleCount = () => {
     const [count, setCount] = useState(0);
-    useEffect(() => {
-        // console.log(count);
+    // custom hook 
 
-        count<=0?document.title=`count`:document.title = `Count (${count})`
-
-       /*  if(count <=0){
-            document.title = `Count`
-        }else{
-            document.title = `Count (${count})`
-        } */
-        
-    }, [count])
+    useTitle(count);
 
     const onClick = () => {
         setCount((prev)=>prev+1)
