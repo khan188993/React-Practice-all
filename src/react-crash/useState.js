@@ -1,17 +1,21 @@
 import React,{useState} from 'react'
 
 const UseState = () => {
-
-    const [counter, setCounter] = useState(1)
-    const onClick = ()=>{
-    //   setCounter(counter+1)
-      setCounter((prevCounter)=>{ return prevCounter+1})
-      console.log(counter);
+    const [name, setName] = useState("")
+    // console.log(useState(name));
+    const onChange = (event) =>{
+        console.log(event.target);
+        console.log(event.target.type);
+        console.log(event.target.value);
+        
+        let inputValue = event.target.value;
+        setName(inputValue)
+        console.log(inputValue);
     }
     return (
         <>
-            <h1>{counter}</h1>
-            <button onClick={onClick}>Increment</button>
+            <h1>{name}</h1>
+            <input type="text" value={name} onChange={onChange}/>
         </>
     )
 }
