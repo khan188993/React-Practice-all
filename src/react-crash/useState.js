@@ -1,12 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const UseState = () => {
 
-    // react don't increase js basic counter 
-    let counter = 0;
+    const [counter, setCounter] = useState(1)
     const onClick = ()=>{
-        counter = counter + 1;
-        console.log(counter);
+    //   setCounter(counter+1)
+      setCounter((prevCounter)=>{ return prevCounter+1})
+      console.log(counter);
     }
     return (
         <>
