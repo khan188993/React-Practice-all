@@ -15,13 +15,13 @@ import UseCon from './react-crash/useCon' */
 //! thapta react hook 
 import UseState from './thapa-hook/useState'
 import TitleCount from './thapa-hook/custom-hooks/titleCount'
-
+import Todo from './thapa-hook/todo'
 
 
 const App = () => {
   return (
     <>
-      <TitleCount/>
+      <Todo/>
     </>
   )
 }

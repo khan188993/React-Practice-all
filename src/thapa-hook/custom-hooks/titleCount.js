@@ -5,7 +5,7 @@ const TitleCount = () => {
     const [count, setCount] = useState(0);
     // custom hook 
 
-    useTitle(count);
+    useTitle(count); 
 
     const onClick = () => {
         setCount((prev)=>prev+1)
