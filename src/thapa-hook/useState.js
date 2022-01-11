@@ -1,4 +1,9 @@
 import React from 'react'
+import '../App.module.css' 
+//local will work if import addded 
+//in react js basic click will not work
+//hook must see in console.log 
+//react.useState 
 
 const UseState = () => {
     return (

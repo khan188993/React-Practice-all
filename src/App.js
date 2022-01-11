@@ -1,4 +1,5 @@
 import React from 'react'
+// import './App.module.css' = global use
 //! React Crash Course 
 
 /* import UseState from './react-crash/useState'
@@ -13,13 +14,14 @@ import UseCon from './react-crash/useCon' */
 
 //! thapta react hook 
 import UseState from './thapa-hook/useState'
+import TitleCount from './thapa-hook/custom-hooks/titleCount'
 
 
 
 const App = () => {
   return (
     <>
-      <UseState/>
+      <TitleCount/>
     </>
   )
 }
