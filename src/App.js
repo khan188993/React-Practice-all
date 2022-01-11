@@ -7,12 +7,13 @@ import UseRef from './react-crash/useRef'
 import UseLayoutEffect from './react-crash/useLayoutEffect'
 import UseContext from './react-crash/useContext/useContext'
 import UseMemo from './react-crash/useMemo'
+import UseCon from './react-crash/useCon'
 
 
 const App = () => {
   return (
     <>
-      <UseMemo/>
+      <UseCon/>
     </>
   )
 }
