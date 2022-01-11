@@ -1,15 +1,12 @@
-import React,{useLayoutEffect,useEffect,useState} from 'react'
+import React,{useLayoutEffect,useEffect,useRef} from 'react'
 
 const UseLayoutEffect = () => {
+    const inputRef = useRef(null)
     useEffect(() => {
-        console.log("UseEffect 1")
+        console.log(inputRef.current.value="arfan khan")
     }, [])
     useLayoutEffect(() => {
-        console.log("UseLayoutEffect")
-    }, [])
-
-    useEffect(() => {
-        console.log("UseEffect 2")
+        console.log(inputRef.current.value)
     }, [])
 
     
@@ -17,6 +14,7 @@ const UseLayoutEffect = () => {
     return (
         <div>
             <h1>UseLayoutEffect </h1>
+            <input type="text" value="Pedro" ref={inputRef}/>
             
         </div>
     )
