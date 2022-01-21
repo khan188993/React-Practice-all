@@ -49,7 +49,7 @@ const Todo = () => {
         <input type="text" onChange={onChange} ref={inputRef}/>
         <button onClick={AddItems}>Add</button>
         <div>
-          {items.map((element, index) => {
+          {items.sort().map((element, index) => {
             return (
               <p key={index}>
                 {element} <button onClick={() => removeItems(index)}>Remove</button>
