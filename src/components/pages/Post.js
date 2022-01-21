@@ -1,9 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 
 const Post = () => {
     // console.log(useParams());
     const {category,brand,id} = useParams();
+    const [searchParam,setSearchParam] = useSearchParams()
+    // http://localhost:3000/post/leptop-brand/32?price=200
+    console.log(searchParam.get('price'));
     return (
         <>
          <h1>Post Page  {category && `form ${category}`}</h1>   
