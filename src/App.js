@@ -1,10 +1,7 @@
-import React, { useReducer } from 'react'
-import UseReducer from './react-crash/useReducer'
-
 const App = () => {
   return (
     <>
-      <UseReducer/>
+      <h1>React Router Dom 6</h1>
     </>
   )
 }
