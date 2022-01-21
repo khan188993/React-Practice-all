@@ -6,16 +6,25 @@ const Navigation = () => {
     <>
       <ul>
         <li>
-          <NavLink to="/" style={({isActive})=>{return {background:isActive?"red":""}}}>Home</NavLink>
+          <NavLink to="/" style={({isActive})=>{return {color:isActive?"red":""}}}>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about" style={({isActive})=>{return {background:isActive?"red":""}}}>About</NavLink>
+          <NavLink to="/about" style={({isActive})=>{return {color:isActive?"red":""}}}>About</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" style={({isActive})=>{return {background:isActive?"red":""}}}>Contact</NavLink>
+          <NavLink to="/dashboard" style={({isActive})=>{return {color:isActive?"red":""}}}>Dashboard</NavLink>
         </li>
         <li>
-          <NavLink to="/post" style={({isActive})=>{return {background:isActive?"red":""}}}>Post</NavLink>
+          <NavLink to="/login" style={({isActive})=>{return {color:isActive?"red":""}}}>Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/logout" style={({isActive})=>{return {color:isActive?"red":""}}}>Logout</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" style={({isActive})=>{return {color:isActive?"red":""}}}>Contact</NavLink>
+        </li>
+        <li>
+          <NavLink to="/post" style={({isActive})=>{return {color:isActive?"red":""}}}>Post</NavLink>
         </li>
       </ul>
     </>
