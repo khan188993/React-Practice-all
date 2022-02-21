@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <h1>React Router Dom 6 - By Geeky Show</h1>
-      <Navigation />
+      <Navigation />d
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
