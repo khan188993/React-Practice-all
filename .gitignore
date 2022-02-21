@@ -2,9 +2,9 @@
 
 # dependencies
 /node_modules
+/Note-2.0
 /.pnp
 .pnp.js
-/Note-2.0
 
 
 # testing
